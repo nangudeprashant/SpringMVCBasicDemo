@@ -5,22 +5,22 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.javaLive.model.EmployeeVO;
+import com.javaLive.model.Employee;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-	public List<EmployeeVO> getAllEmployees() 
+	public List<Employee> getAllEmployees() 
 	{
-		List<EmployeeVO> employees = new ArrayList<EmployeeVO>();
+		List<Employee> employees = new ArrayList<Employee>();
 		
-		EmployeeVO vo1 = new EmployeeVO();
+		Employee vo1 = new Employee();
 		vo1.setId(1);
-		vo1.setFirstName("Lokesh");
-		vo1.setLastName("Gupta");
+		vo1.setFirstName("FName");
+		vo1.setLastName("LName");
 		employees.add(vo1);
 		
-		EmployeeVO vo2 = new EmployeeVO();
+		Employee vo2 = new Employee();
 		vo2.setId(2);
 		vo2.setFirstName("Raj");
 		vo2.setLastName("Kishore");

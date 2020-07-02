@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.javaLive.dao.EmployeeDAO;
-import com.javaLive.model.EmployeeVO;
+import com.javaLive.model.Employee;
 
 @Service
 public class EmployeeManagerImpl implements EmployeeManager {
@@ -14,7 +14,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	@Autowired
 	EmployeeDAO dao;
 	
-	public List<EmployeeVO> getAllEmployees() 
+	public List<Employee> getAllEmployees() 
 	{
 		return dao.getAllEmployees();
 	}

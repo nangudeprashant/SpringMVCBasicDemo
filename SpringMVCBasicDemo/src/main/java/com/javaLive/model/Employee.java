@@ -2,7 +2,7 @@ package com.javaLive.model;
 
 import java.io.Serializable;
 
-public class EmployeeVO implements Serializable 
+public class Employee implements Serializable 
 {
 	private static final long serialVersionUID = 1L;
 

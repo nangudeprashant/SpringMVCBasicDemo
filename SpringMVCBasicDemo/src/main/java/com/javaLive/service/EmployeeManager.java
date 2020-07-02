@@ -2,9 +2,9 @@ package com.javaLive.service;
 
 import java.util.List;
 
-import com.javaLive.model.EmployeeVO;
+import com.javaLive.model.Employee;
 
 public interface EmployeeManager 
 {
-	public List<EmployeeVO> getAllEmployees();
+	public List<Employee> getAllEmployees();
 }

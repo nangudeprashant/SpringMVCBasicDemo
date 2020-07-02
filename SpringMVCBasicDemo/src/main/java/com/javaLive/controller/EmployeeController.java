@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.javaLive.model.EmployeeVO;
+import com.javaLive.model.Employee;
 import com.javaLive.service.EmployeeManager;
 
 @Controller
@@ -24,31 +24,31 @@ public class EmployeeController
     @RequestMapping(method = RequestMethod.GET)
     public String setupForm(Model model)
     {
-         EmployeeVO employeeVO = new EmployeeVO();
-         model.addAttribute("employee", employeeVO);
+         Employee employee = new Employee();
+         model.addAttribute("employee", employee);
          return "addEmployee";
     }
      
     @RequestMapping(method = RequestMethod.POST)
-    public String submitForm(@ModelAttribute("employee") EmployeeVO employeeVO,
+    public String submitForm(@ModelAttribute("employee") Employee employee,
                             BindingResult result, SessionStatus status)
     {
         //Validation code start
         boolean error = false;
          
-        System.out.println(employeeVO); //Verifying if information is same as input by user
+        System.out.println(employee); //Verifying if information is same as input by user
          
-        if(employeeVO.getFirstName().isEmpty()){
+        if(employee.getFirstName().isEmpty()){
             result.rejectValue("firstName", "error.firstName");
             error = true;
         }
          
-        if(employeeVO.getLastName().isEmpty()){
+        if(employee.getLastName().isEmpty()){
             result.rejectValue("lastName", "error.lastName");
             error = true;
         }
          
-        if(employeeVO.getEmail().isEmpty()){
+        if(employee.getEmail().isEmpty()){
             result.rejectValue("email", "error.email");
             error = true;
         }
